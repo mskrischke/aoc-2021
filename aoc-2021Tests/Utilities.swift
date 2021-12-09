@@ -55,7 +55,14 @@ struct Vec3: Hashable {
     }
 }
 
-struct Vec2 {
+struct Vec2: Hashable, CustomStringConvertible {
+
+    var description: String {
+        return "(x: \(x), y: \(y))"
+    }
+
+
+
     static let zero = Vec2(x: 0, y: 0)
 
     var x, y: Int
